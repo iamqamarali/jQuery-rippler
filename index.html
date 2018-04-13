@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="rippler.css">
+
+    <style>
+        .button{
+            height: 50px;
+            width: 100px;
+            color: white;
+            background-color: #a81da8;
+            border: 0;
+            box-shadow: mediumorchid 0 7px 15px -3px ;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+    </style>
+ 
+</head>
+<body>
+    <button class="button is-danger"  >button</button>
+    <button class="button is-info"    >button</button>
+    <button class="button is-primary" >button</button>
+    <button class="button is-success" >button</button>
+
+    <div>
+        <button class="button" >button </button>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    
+    <script src="rippler.js"></script>
+
+    <script>
+    
+    var rippler =  $('.button').rippler();
+
+    </script>
+
+</body>
+</html>
