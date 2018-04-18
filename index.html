@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="rippler.css">
 
     <style>
+        body  button , body h2 , body p {
+            margin:20px;
+        }
         .button{
             height: 50px;
             width: 100px;
@@ -15,33 +18,60 @@
             background-color: #a81da8;
             border: 0;
             box-shadow: mediumorchid 0 7px 15px -3px ;
-            margin: 20px;
             cursor: pointer;
+        }
+        .is-danger{
+            background-color : #f03c16;
+            box-shadow: #f03c16 0 7px 15px -3px ;
         }
 
     </style>
  
 </head>
 <body>
-    <button class="button is-danger"  >button</button>
-    <button class="button is-info"    >button</button>
-    <button class="button is-primary" >button</button>
-    <button class="button is-success" >button</button>
+    
+    <h2>Ripples Demo</h2>
 
+    <button class="button ">button</button>
+    <button class="button ">button</button>
+    <button class="button ">button</button>
+
+    <hr>
+    
+    <h2>Dynamic Ripple Demo</h2>
+    <p>In this example the buttons created after words <b>dynamically with javascript</b> will also going to contain the ripple effect</p>
+    <p>Click the buttons above below to make buttons dynamically</p>
     <div>
-        <button class="button" >button </button>
+        <button class="button is-danger" >Default</button>
+        <button class="button is-danger" >Default</button>
+    </div>
+   
+    <h2>DynamicLy Created Button</h2>
+    <div id="dynamic-buttons-container">
+
     </div>
 
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
     
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
     <script src="rippler.js"></script>
 
     <script>
-    
-    var rippler =  $('.button').rippler();
+        $('.button').rippler();
+
+        var rippler = $().rippler({
+            selector : '.button.is-danger',
+            color : "rgba(254,154,238,.2)"
+        });
+
+        $('.button.is-danger').click(function(){
+            $('#dynamic-buttons-container')
+                .append( $('<button class="button is-danger">buutton</button>') )              ;
+        });
 
     </script>
 
