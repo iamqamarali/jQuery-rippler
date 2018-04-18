@@ -30,9 +30,9 @@ While if you use the second approch in which you dont provide the selector to th
 # Options
 There are some options that you can supply to the rippler function as an argument
  1. Color
-  - - You can supply the color of the ripple. By default the plugin will extract the text color the on element  and make it the color of the ripple.
+    - You can supply the color of the ripple. By default the plugin will extract the text color the on element  and make it the color of the ripple.
  2. Duration
-  - - You can specify the duration the ripples should take to end in miliseconds.
+    - You can specify the duration the ripples should take to end in miliseconds.
 
 **Example**
 ```javascript
