@@ -1,6 +1,6 @@
 # jQuery-rippler.js
 
-it is a javascript plugin for jquery.
+it is a javascript plugin for jquery for making ripples effects on DOM elements.
 
 
 # Description
